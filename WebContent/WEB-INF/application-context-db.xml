@@ -13,11 +13,11 @@
 		<property name="driverClassName" 
 					value="com.mysql.jdbc.Driver"/>
 		<property name="url" 
-					value="jdbc:mysql://localhost:3306/guest_request"/>
+					value="jdbc:mysql://localhost:3306/desafio"/>
 		<property name="username" 
-					value="guest_request"/>
+					value="admin"/>
 		<property name="password" 
-					value="guest_request"/>
+					value="admin"/>
 					
 		<property name="initialSize" value="10"/>			
 		<property name="maxTotal" value="30"/>			
@@ -28,7 +28,7 @@
 		class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
 		
 		<property name="dataSource" ref="datasource"/>
-		<property name="persistenceUnitName" value="guestRequestPU"/>
+		<property name="persistenceUnitName" value="defaultPU"/>
 
 		<property name="persistenceProvider">
 			<bean class="org.hibernate.ejb.HibernatePersistence" />
@@ -53,7 +53,7 @@
 		<property name="entityManagerFactory" 
 										ref="entityManagerFactory"/>
 	</bean>
-	
+		
 	<tx:annotation-driven 
 		transaction-manager="transactionManager"/>
 

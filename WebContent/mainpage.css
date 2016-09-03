@@ -2,12 +2,15 @@
 
 .btn-xl {
     padding: 18px 18px;
-    font-size: 80px; //change this to your desired size
-    line-height: normal;
-    -webkit-border-radius: 8px;
-       -moz-border-radius: 8px;
-            border-radius: 8px;
-     border-width: 90px;
+    font-size: 60px; //change this to your desired size
+    border-width: 10px;
+    color: aqua;
+    background-color: red;
+-webkit-transition: background 500ms ease;
+-moz-transition: background 500ms ease;
+-ms-transition: background 500ms ease;
+-o-transition: background 500ms ease;
+transition: background 500ms ease;
 }
 
 .title{
@@ -16,4 +19,50 @@
 
 .background{
 	background: FF3333;
+}
+
+.element {
+  text-align: center;
+  vertical-align: bottom;
+}
+
+.blue-button {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  width: 250px;
+  height: 250px;
+  cursor: pointer;
+  margin: 0 auto;
+  border: 2px solid rgb(30,205,151);
+  -webkit-border-radius: 40px;
+  border-radius: 40px;
+  font: normal 50px/50px "Advent Pro", Helvetica, sans-serif;
+  color: rgb(30, 205, 151);
+  text-align: center;
+  -o-text-overflow: clip;
+  text-overflow: clip;
+  letter-spacing: 8px;
+  background: rgba(0,0,0,0);
+  -webkit-transition: background-color 0.3s cubic-bezier(0, 0, 0, 0), color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0), border-width 0.3s cubic-bezier(0, 0, 0, 0), border-color 0.3s cubic-bezier(0, 0, 0, 0);
+  -moz-transition: background-color 0.3s cubic-bezier(0, 0, 0, 0), color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0), border-width 0.3s cubic-bezier(0, 0, 0, 0), border-color 0.3s cubic-bezier(0, 0, 0, 0);
+  -o-transition: background-color 0.3s cubic-bezier(0, 0, 0, 0), color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0), border-width 0.3s cubic-bezier(0, 0, 0, 0), border-color 0.3s cubic-bezier(0, 0, 0, 0);
+  transition: background-color 0.3s cubic-bezier(0, 0, 0, 0), color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0), border-width 0.3s cubic-bezier(0, 0, 0, 0), border-color 0.3s cubic-bezier(0, 0, 0, 0);
+}
+
+.blue-button:hover {
+  color: rgba(255,255,255,1);
+  letter-spacing: 16px;
+  background: rgb(30, 205, 151);
+}
+
+.blue-button:active {
+  border: 2px solid rgba(33,224,163,1);
+  font: normal normal bold 50px/50px "Advent Pro", Helvetica, sans-serif;
+  letter-spacing: 8px;
+  background: rgba(33,224,163,1);
+  -webkit-transition: none;
+  -moz-transition: none;
+  -o-transition: none;
+  transition: none;
 }

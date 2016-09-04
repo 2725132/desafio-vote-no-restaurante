@@ -5,18 +5,38 @@
  */
 package com.challenge.repository;
 
+import java.io.Serializable;
+
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
-public abstract class GenericRepository <Entity> {
+import org.springframework.transaction.annotation.Transactional;
+
+public abstract class GenericRepository<Entity extends Serializable, Id extends Serializable> {
+	
+	private Class<Entity> clazz;
+	
 	@PersistenceContext
 	private EntityManager em;
 	
-	public void insert(Entity entity){
-		em.persist(entity);		
+	public GenericRepository(Class<Entity> clazz){
+		this.clazz = clazz; 
 	}
+	
+	@Transactional
+	public Entity insert(Entity entity){
+		 em.persist(entity);		
+		 return entity;
+	}
+	
+	@Transactional
 	public void delete(Entity entity){
 		em.remove(entity);
 	}
-
+	
+	@Transactional(readOnly=true)
+	public Entity findById(Id id){
+		return em.find(clazz, id);
+	}
+	
 }

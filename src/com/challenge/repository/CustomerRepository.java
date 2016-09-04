@@ -7,8 +7,9 @@ import com.challenge.identity.Customer;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@NoArgsConstructor
 @Repository
-public class CustomerRepository extends GenericRepository<Customer>{
-	
+public class CustomerRepository extends GenericRepository<Customer, Long>{
+	public CustomerRepository(){
+		super(Customer.class);
+	}
 }

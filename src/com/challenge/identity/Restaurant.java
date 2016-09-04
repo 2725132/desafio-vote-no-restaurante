@@ -8,17 +8,21 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
-@RequiredArgsConstructor
+
 @Data
+@NoArgsConstructor
+@RequiredArgsConstructor
 @Entity
 public class Restaurant implements Serializable{
 	
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
-	private int id;
+	private long id;
 	
 	@NonNull
 	private String name;
+	
 }

@@ -12,20 +12,22 @@ import com.challenge.identity.features.Login;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
+import lombok.Setter;
 @Data
+@NoArgsConstructor
+@RequiredArgsConstructor
 @Entity
 public class Customer implements Serializable {
 	
-	public Customer(String name, String email) {
-		this.name = name;
-		this.email = email;
-	}
+
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
-	private int id;
+	private long id;
 	
 	@Transient
 	private Login login;

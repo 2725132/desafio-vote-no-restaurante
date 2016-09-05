@@ -1,3 +1,6 @@
+<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>  
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>  
+
 <html>
     <head>
 	<!--Custom CSS-->
@@ -21,20 +24,22 @@
 		</div>
 		
 		<div class="row">
-			<div class="col-sm-4">
-				<h1>Subway</h1>
-				<div class="yellow-btn text">Vote</div>
-			</div>
+			<form:form method="post" action="computeVote">
+				<div class="col-sm-4">
+					<h1>${restaurant1.name}</h1>
+					<button class="yellow-btn text" name="button" value="${restaurant1.id}" >Vote</button>
+				</div>
 			
-			<div class="col-sm-4">
-				<h1>Mc Donald's</h1>
-				<div class="red-btn">Vote</div>
-			</div>
+				<div class="col-sm-4">
+					<h1>${restaurant2.name}</h1>
+				<button class="red-btn" name="button" value="${restaurant2.id}" type="text" >Vote</button>
+				</div>
 			
-			<div class="col-sm-4">
-				<h1>Burguer King</h1>
-				<div class="green-btn">Vote</div>
-			</div>
+				<div class="col-sm-4">
+					<h1>${restaurant3.name}</h1>
+					<button class="green-btn" name="button" value="${restaurant3.id}" >Vote</button>
+				</div>
+			</form:form>
 		</div>
 		
 		<div class="footer">
@@ -45,7 +50,8 @@
 		
 	</body>
 	<body>
-		<h1>Under construction...</h1>>
+		<h2>${response}</h2>
+		<h1 class="ubuntu-h1">Under construction...</h1>>
 	</body>
 	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>

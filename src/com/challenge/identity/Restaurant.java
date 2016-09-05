@@ -16,13 +16,20 @@ import lombok.RequiredArgsConstructor;
 @NoArgsConstructor
 @RequiredArgsConstructor
 @Entity
-public class Restaurant implements Serializable{
-	
+public class Restaurant implements Serializable {
+
 	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long id;
-	
+
 	@NonNull
 	private String name;
-	
+
+	@NonNull
+	private int voteCount;
+
+	public int incrementVotes() {
+		this.voteCount++;
+		return voteCount;
+	}
 }

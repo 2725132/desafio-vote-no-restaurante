@@ -13,12 +13,24 @@ import com.challenge.repository.RestaurantRepository;
 @Controller
 public class RestaurantController {
 	@Autowired
-	RestaurantRepository rr;
-	
-	@RequestMapping(value="/create", method=RequestMethod.POST)
-	public ModelAndView createNewRestaurant(@ModelAttribute("name")String name){
-		rr.insert(new Restaurant(name));
-		return new ModelAndView("redirect:/vote-restaurant");
+	RestaurantRepository repository;
+
+	@RequestMapping(value = "/create", method = RequestMethod.POST)
+	public ModelAndView createNewRestaurant(String name) {
+		Restaurant response = repository.insert(new Restaurant(name, 0));
+
+		return new ModelAndView("/restaurant-form", "response", response);
 	}
-	
+
+	@RequestMapping(value = "/findById", method = RequestMethod.GET)
+	public Restaurant findById(long id) {
+		return repository.findById(id);
+	}
+
+	@RequestMapping(value = "/computeVote")
+	public ModelAndView vote(String button) {
+		Long id = Long.parseLong(button);
+		repository.computeVote(id);
+		return new ModelAndView("redirect:/vote", "response", "Successful!");
+	}
 }

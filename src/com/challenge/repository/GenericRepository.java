@@ -30,6 +30,11 @@ public abstract class GenericRepository<Entity extends Serializable, Id extends 
 	}
 	
 	@Transactional
+	public Entity update(Entity entity){
+		return em.merge(entity);
+	}
+	
+	@Transactional
 	public void delete(Entity entity){
 		em.remove(entity);
 	}

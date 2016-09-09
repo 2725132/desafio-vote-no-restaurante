@@ -1,13 +1,63 @@
 @CHARSET "ISO-8859-1";
 
-.ubuntu-h1 {
-	color: rgba(187, 170, 171, 1);
-	font-family: Ubuntu;
-	font-size: 36px;
-	font-style: normal;
-	font-variant: normal;
-	font-weight: 700;
-	line-height: 46.8px;
+@font-face {
+    font-family: 'ubuntu'; /*a name to be used later*/
+    src: url('//fonts.googleapis.com/css?family=Ubuntu'); /*URL to font*/
+}
+
+@font-face {
+    font-family: 'inconsolata'; /*a name to be used later*/
+    src: url('//fonts.googleapis.com/css?family=Share+Tech+Mono'); /*URL to font*/
+}
+
+.container-fluid{
+	text-align: center;
+	font-family: ubuntu;
+	color: white;
+}
+
+.gouvea{
+	max-width: 100%;
+	display:block; 
+	background-image: url('photography.jpg');
+	background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+}
+
+.gouvea-brand{
+	max-width: 100%;
+	display:block; 
+	background-repeat:no-repeat;
+    height: 128px;
+    width: 128px;
+    border: hidden;
+    background: transparent;
+	background-image: url('brand.png');
+}
+
+.gouvea-link{
+	font-size: 25px;
+	color: #FF6347;
+	font-family: ubuntu; !important
+}
+
+.navbar{
+	color: white;
+	
+}
+
+.jumbotron{
+	background: #FF6347;
+	opacity: 0.5;
+	background-size: contain;
+}
+
+.navbar-brand{	
+	stress: inherit;
+	font-size: 40px;
+	font-family: ubuntu;
+	color: #FFFAFA;
 }
 
 .yellow-btn {
@@ -160,32 +210,6 @@
 	transition: none;
 }
 
-.background {
-	-webkit-box-sizing: content-box;
-	-moz-box-sizing: content-box;
-	box-sizing: content-box;
-	width: 302%;
-	height: 66%;
-	padding: 21px;
-	overflow: hidden;
-	border: none;
-	font: normal 16px/1 "Times New Roman", Times, serif;
-	color: rgba(255, 255, 255, 1);
-	text-align: center;
-	-o-text-overflow: ellipsis;
-	text-overflow: ellipsis;
-	background: url("http://enjoycss.com/bg-img/custom/25190-1p7nuh5.jpg");
-	background-position: 50% 50%;
-	-webkit-background-origin: padding-box;
-	background-origin: padding-box;
-	-webkit-background-clip: border-box;
-	background-clip: border-box;
-	-webkit-background-size: auto auto;
-	background-size: auto auto;
-	-webkit-box-shadow: 1px 1px 1px 0 rgba(0, 0, 0, 0.3);
-	box-shadow: 1px 1px 1px 0 rgba(0, 0, 0, 0.3);
-	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
-}
 
 .input-name {
 	display: inline-block;
@@ -244,29 +268,15 @@
 	-moz-box-sizing: content-box;
 	box-sizing: content-box;
 	cursor: pointer;
-	padding: 0 20px;
-	border: none;
 	-webkit-border-radius: 20px;
-	border-radius: 20px;
-	font: normal normal bold 30px/50px "ubuntu", Helvetica, sans-serif;
-	color: rgba(187, 170, 171, 1);
-	-o-text-overflow: clip;
-	text-overflow: clip;
-	background: rgba(255, 255, 255, 1);
-	-webkit-box-shadow: 0 1px 0 0 rgb(119, 119, 119), 0 2px 0 0
-		rgb(119, 119, 119), 0 3px 0 0 rgb(119, 119, 119), 0 4px 0 0
-		rgb(119, 119, 119), 0 5px 0 0 rgb(119, 119, 119), 0 6px 0 0
-		rgb(119, 119, 119), 0 0 5px 0 rgba(0, 0, 0, 0.0980392), 0 1px 3px 0
-		rgba(0, 0, 0, 0.298039), 0 3px 5px 0 rgba(0, 0, 0, 0.2), 0 5px 10px 0
-		rgba(0, 0, 0, 0.247059), 0 10px 10px 0 rgba(0, 0, 0, 0.2), 0 20px 20px
-		0 rgba(0, 0, 0, 0.14902);
-	box-shadow: 0 1px 0 0 rgb(119, 119, 119), 0 2px 0 0 rgb(119, 119, 119),
-		0 3px 0 0 rgb(119, 119, 119), 0 4px 0 0 rgb(119, 119, 119), 0 5px 0 0
-		rgb(119, 119, 119), 0 6px 0 0 rgb(119, 119, 119), 0 0 5px 0
-		rgba(0, 0, 0, 0.0980392), 0 1px 3px 0 rgba(0, 0, 0, 0.298039), 0 3px
-		5px 0 rgba(0, 0, 0, 0.2), 0 5px 10px 0 rgba(0, 0, 0, 0.247059), 0 10px
-		10px 0 rgba(0, 0, 0, 0.2), 0 20px 20px 0 rgba(0, 0, 0, 0.14902);
-	text-shadow: 0 1px 0 #FFFFFF;
+	font-size: 55px;
+	padding: 40px 40px;
+	font-family: 'inconsolata', monospace;
+	color: #FF6347;
+	border: 2px solid;
+	border-color: white;
+	background: rgba(0, 0, 0, 0);
+	opacity: 0.9; 
 }
 
 .form-btn:hover {
@@ -286,6 +296,3 @@
 	background: rgba(255, 255, 255, 1);
 }
 
-.color:light-purple {
-	color: rgba(138, 84, 201, 1);
-}

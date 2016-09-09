@@ -17,8 +17,8 @@ public class RestaurantController {
 
 	@RequestMapping(value = "/create", method = RequestMethod.POST)
 	public ModelAndView createNewRestaurant(String name) {
-		Restaurant response = repository.insert(new Restaurant(name, 0));
-
+		Restaurant result = repository.insert(new Restaurant(name, 0));
+		String response = result.getName() + " Successfully added with id " + result.getId(); 
 		return new ModelAndView("/restaurant-form", "response", response);
 	}
 
@@ -28,9 +28,9 @@ public class RestaurantController {
 	}
 
 	@RequestMapping(value = "/computeVote")
-	public ModelAndView vote(String button) {
+	public String vote(String button) {
 		Long id = Long.parseLong(button);
 		repository.computeVote(id);
-		return new ModelAndView("redirect:/vote", "response", "Successful!");
+		return  "Successful!";
 	}
 }

@@ -19,7 +19,7 @@
 	
 	<title>Which's the best?</title>
 	<div class="container-fluid">
-		<div class="jumbotron">
+		<div class="jumbotron color:red">
 			<h1 class="">Which's the best restaurant?</h1>
 		</div>
 		

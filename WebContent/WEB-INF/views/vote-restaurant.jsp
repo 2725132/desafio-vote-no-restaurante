@@ -3,23 +3,14 @@
 
 <html>
     <head>
-	<!--Custom CSS-->
-	<link rel="stylesheet" href="mainpage.css">
-	<link rel="stylesheet" href="custom.css">
-	<link async href="http://fonts.googleapis.com/css?family=Advent%20Pro" data-generated="http://enjoycss.com" rel="stylesheet" type="text/css"/>
-	<link async href="http://fonts.googleapis.com/css?family=Advent%20Pro" data-generated="http://enjoycss.com" rel="stylesheet" type="text/css"/>
-	
+
 		
-    <!-- Bootstrap core CSS -->
-    <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
-	
-	<!-- Custom styles for this template -->
-	<link href="http://getbootstrap.com/examples/cover/cover.css" rel="stylesheet">
+
 	</head>
 	
 	<title>Which's the best?</title>
-	<div class="container-fluid">
-		<div class="jumbotron color:red">
+	<div class="container-fluid mainscreen">
+		<div class="jumbotron">
 			<h1 class="">Which's the best restaurant?</h1>
 		</div>
 		
@@ -32,7 +23,7 @@
 			
 				<div class="col-sm-4">
 					<h1>${restaurant2.name}</h1>
-				<button class="red-btn" name="button" value="${restaurant2.id}" type="text" >Vote</button>
+				<button class="red-btn" name="button" value="${restaurant2.id}"  >Vote</button>
 				</div>
 			
 				<div class="col-sm-4">
@@ -49,14 +40,31 @@
 		
 		
 	</body>
-	<body>
-		<h2>${response}</h2>
-		<h1 class="ubuntu-h1">Under construction...</h1>>
-	</body>
+    <footer class="bs-docs-footer">
+        <div class="container">
+            <ul class="bs-docs-footer-links">
+                <li>
+                    <a href="www.facebook.com/felipe.gouvea.7">Facebook</a>
+                </li>
+                <li>
+                    <a href="github.com/2725132">Github</a>
+                </li>
+            </ul>
+        </div>    
+    </footer>
 	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-	<link rel="stylesheet" type="text/css" href="css/custom.css">
+
+	<!--Custom CSS-->
+	<link rel="stylesheet" href="resources/custom.css">	
+	
+	<!-- Bootstrap core CSS -->
+    <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+	
+	<!-- Custom styles for this template -->
+	<link href="http://getbootstrap.com/examples/cover/cover.css" rel="stylesheet">
+	
+	<script src="resources/control.js"></script>
 	
 
 </html>

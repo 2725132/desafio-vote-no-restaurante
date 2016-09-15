@@ -2,17 +2,11 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>  
 <html>
     <head>
-	<!--Custom CSS-->
-	
-	<link async href="http://fonts.googleapis.com/css?family=Advent%20Pro" data-generated="http://enjoycss.com" rel="stylesheet" type="text/css"/>
-	<link async href="http://fonts.googleapis.com/css?family=Advent%20Pro" data-generated="http://enjoycss.com" rel="stylesheet" type="text/css"/>
-			
+				
     <!-- Bootstrap core CSS -->
     <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
-    
-	
-	<link rel="stylesheet" href="mainpage.css">
-	<link rel="stylesheet" href="custom.css">
+	<link rel="stylesheet" href="resources/custom.css">	
+
 	
 	</head>
   <body class="bs-docs-home gouvea">
@@ -20,7 +14,7 @@
     <header class="navbar">
         <div class="container">
             <nav class="navbar-header">
-            	<img  class="gouvea-brand"/>
+            	<img  class="gouveabrand"/>
                 <a href="#" class="navbar-brand">Challenge</a>
             </nav>
             <nav class="collapse navbar-collapse">
@@ -39,8 +33,8 @@
                 <nav class="navbar-right">
                     <ul class="nav navbar">
                         <li>
-                            <form:form method="post" action="vote">
-								<button class="gouvea-home"></button>
+                            <form:form method="post" action="index">
+								<button class="btn gouveahome"></button>
 							</form:form>
                         </li>
                     </ul>
@@ -79,10 +73,8 @@
 
 	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-	<link rel="stylesheet" type="text/css" href="css/custom.css">
-	
-	<script type="text/javascript" script-name="ubuntu" src="http://use.edgefonts.net/ubuntu.js"></script>
+
+
 	
 
 </html>

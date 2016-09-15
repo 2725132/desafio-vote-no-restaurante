@@ -14,7 +14,7 @@ public class MainController {
 	@Autowired
 	RestaurantController restaurantController;
 
-	@RequestMapping("/vote")
+	@RequestMapping("/")
 	public ModelAndView vote() {
 		ModelAndView resultPage = new ModelAndView("vote-restaurant");
 		resultPage.addObject("restaurant1", restaurantController.findById(1));

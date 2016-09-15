@@ -31,6 +31,6 @@ public class RestaurantController {
 	public String vote(String button) {
 		Long id = Long.parseLong(button);
 		repository.computeVote(id);
-		return "Success!";
+		return "redirect:/home";
 	}
 }

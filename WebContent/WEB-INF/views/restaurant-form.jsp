@@ -1,15 +1,13 @@
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>  
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>  
-<html>
-    <head>
-				
+<html>				
     <!-- Bootstrap core CSS -->
     <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="resources/custom.css">	
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+	<script src="resources/controls.js"></script>
 
-	
-	</head>
-  <body class="bs-docs-home gouvea">
+  <body class="bs-docs-home gouvea" ng-app="app">
       
     <header class="navbar">
         <div class="container">
@@ -30,10 +28,10 @@
                     </li>
                 </ul>
                 
-                <nav class="navbar-right">
+                <nav class="navbar-right" >
                     <ul class="nav navbar">
                         <li>
-                            <form:form method="post" action="index">
+                            <form:form method="post" action="home">
 								<button class="btn gouveahome"></button>
 							</form:form>
                         </li>
@@ -45,17 +43,23 @@
         </div>
     </header>
       
-    <main class="bs-docs-masthead">
-        <div class="container-fluid">            
-            <h1 class="jumbotron">Make your choice</h1>
+    <main class="bs-docs-masthead" ng-view>
+        <div class="container-fluid" ng-controller="cntrl">            
+            <h1 class="jumbotron">Make new restaurant</h1>
     		<form:form method="post" action="create">
+    		
              <div class="">Set your new restaurant's name here</div>
 			     <div class="col-sm-6 col-sm-offset-3">
-				    <input class="form-control " type="text" class="input-name" placeholder="type here.." name="name" required="" type="text"/>
-                     <button class="form-btn " method="POST" type="submit" action="create">Save</button>
+				    <input class="form-control " ng-model="restaurant" type="text" class="input-name" placeholder="type here.." name="name" required="" type="text"/>
+                     <button class="form-btn " ng-click="alert()" method="POST" type="submit" action="create">Save</button>
                  </div>
+            	 <div class="col-md-12" ng-show="showAlert">
+            		<h1>ALERTA, FOI</h1>
+            	 </div>                 
 		      </form:form>
             </div>
+            
+
     </main>
       
     <footer class="bs-docs-footer">

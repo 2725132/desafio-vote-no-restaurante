@@ -31,9 +31,12 @@ public class Customer implements Serializable {
 	
 	@Transient
 	private Login login;
+
+	@NonNull
+	private String lastName;
 	
 	@NonNull
-	private String name;
+	private String firstName;
 	
 	@NonNull
 	private String email;

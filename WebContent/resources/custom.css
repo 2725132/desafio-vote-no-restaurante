@@ -10,6 +10,34 @@
     src: url('//fonts.googleapis.com/css?family=Share+Tech+Mono'); /*URL to font*/
 }
 
+
+.button{
+	
+}
+.label{
+	opacity:0.3; !important
+}
+
+.form-group{
+	opacity: 1;
+	background: #FF6347;
+	border-radius: 15px 15px 15px 15px;
+}
+
+.form-control{
+	opacity: 1; !important
+}
+
+.warning{
+	font-family: monospace;
+	font-size: 48px;
+	position: absolute;
+	z-index: 4;
+	margin-left:auto;
+  	margin-right:auto;
+   	display:center;
+}
+
 .container-fluid{
 	text-align: center;
 	font-family: ubuntu;

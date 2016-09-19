@@ -14,18 +14,14 @@ public class MainController {
 	@Autowired
 	RestaurantController restaurantController;
 
-	@RequestMapping("/home")
-	public ModelAndView vote() {
-		ModelAndView resultPage = new ModelAndView("vote-restaurant");
-		resultPage.addObject("restaurant1", restaurantController.findById(1));
-		resultPage.addObject("restaurant2", restaurantController.findById(2));
-		resultPage.addObject("restaurant3", restaurantController.findById(3));
-		return resultPage;
-	}
 
 	@RequestMapping("/restaurant")
 	public ModelAndView restaurantManager() {
 		return new ModelAndView("restaurant-form");
 	}
 
+	@RequestMapping("/")
+	public String index(){
+		return "index";
+	}
 }

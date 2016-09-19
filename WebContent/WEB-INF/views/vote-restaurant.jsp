@@ -3,9 +3,7 @@
 
 <html>
     <head>
-
-		
-
+		<jsp:include page="head.jsp"></jsp:include>
 	</head>
 	
 	<title>Which's the best?</title>
@@ -15,22 +13,22 @@
 		</div>
 		
 		<div class="row">
-			<form:form method="post" action="computeVote">
+			<form method="post" action="computeVote">
 				<div class="col-sm-4">
 					<h1>${restaurant1.name}</h1>
-					<button class="yellow-btn text" name="button" value="${restaurant1.id}" >Vote</button>
+					<button class="yellow-btn text" name="restaurantId" value="${restaurant1.id}" >Vote</button>
 				</div>
 			
 				<div class="col-sm-4">
 					<h1>${restaurant2.name}</h1>
-				<button class="red-btn" name="button" value="${restaurant2.id}"  >Vote</button>
+					<button class="red-btn" name="restaurantId" value="${restaurant2.id}"  >Vote</button>
 				</div>
 			
 				<div class="col-sm-4">
 					<h1>${restaurant3.name}</h1>
-					<button class="green-btn" name="button" value="${restaurant3.id}" >Vote</button>
+					<button class="green-btn" name="restaurantId" value="${restaurant3.id}" >Vote</button>
 				</div>
-			</form:form>
+			</form>
 		</div>
 		
 		<div class="footer">
@@ -52,19 +50,6 @@
             </ul>
         </div>    
     </footer>
-	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-
-	<!--Custom CSS-->
-	<link rel="stylesheet" href="resources/custom.css">	
-	
-	<!-- Bootstrap core CSS -->
-    <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
-	
-	<!-- Custom styles for this template -->
-	<link href="http://getbootstrap.com/examples/cover/cover.css" rel="stylesheet">
-	
-	<script src="resources/control.js"></script>
 	
 
 </html>

@@ -16,7 +16,7 @@ public class CustomerRepositoryTest {
 	
 	@Test
 	public void insertTest(){
-		Customer c = cr.insert(new Customer("Felipe Gouvea","95felipeg@gmail.com"));
+		Customer c = cr.insert(new Customer("Gouvea", "Felipe" ,"95felipeg@gmail.com"));
 		Assert.assertNotNull(c);
 	}
 	

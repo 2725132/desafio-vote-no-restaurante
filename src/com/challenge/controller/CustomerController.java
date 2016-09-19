@@ -13,17 +13,26 @@ import com.challenge.identity.Customer;
 import com.challenge.repository.CustomerRepository;
 
 import lombok.Data;
-@Data
+
+
 @Controller
-@RequestMapping("/customer")
 public class CustomerController {
 	@Autowired
 	CustomerRepository cr;
 	
+	@Autowired
 	
-	@RequestMapping(value="/create", method=RequestMethod.POST)
-	public ModelAndView createNewUser(@ModelAttribute("name")String name, @ModelAttribute("email")String email ){
-		cr.insert(new Customer(name, email));
-		return new ModelAndView("/customer");
+	@RequestMapping(value="/customer")
+	public ModelAndView customerPage(){
+		ModelAndView resultPage = new ModelAndView("/customer-form");
+
+		return resultPage;
+		
+	}
+	
+	@RequestMapping(value="/insertCustomer", method=RequestMethod.POST)
+	public ModelAndView createNewUser(Customer customer){
+		cr.insert(customer);
+		return new ModelAndView("redirect:/home");
 	}
 }

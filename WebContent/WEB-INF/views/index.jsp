@@ -8,7 +8,7 @@
 <title>Which's the best?</title>
 </head>
 <body>
-	<br><a href="vote">Vote here!</a>
+	<br><a href="home">Vote here!</a>
 	</br>
 	<br></br>
 	<a href="restaurant">Restaurant manager</a>

@@ -33,7 +33,7 @@ public class CustomerController {
 	@RequestMapping(value="/insertCustomer", method=RequestMethod.POST)
 	public ModelAndView createNewUser(Customer customer){
 		cr.insert(customer);
-		
-		return new ModelAndView("redirect:/home");
+			
+		return new ModelAndView("ranking");
 	}
 }

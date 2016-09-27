@@ -6,6 +6,7 @@
 package com.challenge.repository;
 
 import java.io.Serializable;
+import java.util.List;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
@@ -44,4 +45,8 @@ public abstract class GenericRepository<Entity extends Serializable, Id extends 
 		return em.find(clazz, id);
 	}
 	
+	@Transactional(readOnly=true)
+	public List<Entity> findList(int size){
+		return em.createQuery("select c from " + clazz.getName() + " c ", clazz).setMaxResults(size).getResultList();
+	}
 }

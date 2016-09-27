@@ -26,9 +26,9 @@ public class RestaurantController {
 	@RequestMapping("/home")
 	public ModelAndView vote() {
 		ModelAndView resultPage = new ModelAndView("/vote-restaurant");
-		resultPage.addObject("restaurant1", service.findById(1));
-		resultPage.addObject("restaurant2", service.findById(2));
-		resultPage.addObject("restaurant3", service.findById(3));
+		resultPage.addObject("restaurantOne", service.findById(1));
+		resultPage.addObject("restaurantTwo", service.findById(2));
+		resultPage.addObject("restaurantThree", service.findById(3));
 		return resultPage;
 	}
 	
@@ -54,5 +54,12 @@ public class RestaurantController {
 		resultPage.addObject("restaurantThree", service.findById(3));
 		
 		return resultPage;
+	}
+
+	@RequestMapping(value="/displayRanking")
+	public ModelAndView displayRanking(){
+		List<Restaurant> restaurants = service.getResultList(5);
+		
+		return new ModelAndView("ranking","restaurants", restaurants);
 	}
 }

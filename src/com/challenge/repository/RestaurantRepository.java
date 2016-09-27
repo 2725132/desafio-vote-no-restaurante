@@ -20,4 +20,5 @@ public class RestaurantRepository extends GenericRepository<Restaurant, Long> {
 		restaurant.incrementVotes();
 		update(restaurant);
 	}
+	
 }

@@ -1,4 +1,6 @@
 package com.challenge.service;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -21,6 +23,10 @@ public class RestaurantService {
 	
 	public Restaurant findById(long id){
 		return repository.findById(id);
+	}
+	
+	public List<Restaurant> getResultList(int size){
+		return repository.findList(size);
 	}
 	
 }

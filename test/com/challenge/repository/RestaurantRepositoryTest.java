@@ -1,5 +1,7 @@
 package com.challenge.repository;
 
+import java.util.List;
+
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -40,5 +42,15 @@ public class RestaurantRepositoryTest {
 		Restaurant after = repository.findById(id);
 		Assert.assertNotNull(after);
 		Assert.assertTrue(before.getVoteCount() + 1 == after.getVoteCount());
+	}
+	
+	@Test
+	public void findList(){
+		List<Restaurant> restaurants = repository.findList(3);
+		Assert.assertFalse(restaurants.isEmpty());
+		Assert.assertTrue(restaurants.size() == 3);
+		for(Restaurant restaurant: restaurants){
+			System.out.println(restaurant.toString());
+		}
 	}
 }

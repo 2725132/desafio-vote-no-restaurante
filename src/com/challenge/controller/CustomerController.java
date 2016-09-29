@@ -14,26 +14,24 @@ import com.challenge.repository.CustomerRepository;
 
 import lombok.Data;
 
-
 @Controller
 public class CustomerController {
 	@Autowired
 	CustomerRepository cr;
-	
+
 	@Autowired
-	
-	@RequestMapping(value="/customer")
-	public ModelAndView customerPage(){
+
+	@RequestMapping(value = "/customer")
+	public ModelAndView customerPage() {
 		ModelAndView resultPage = new ModelAndView("/customer-form");
 
 		return resultPage;
-		
+
 	}
-	
-	@RequestMapping(value="/insertCustomer", method=RequestMethod.POST)
-	public ModelAndView createNewUser(Customer customer){
+
+	@RequestMapping(value = "/insertCustomer", method = RequestMethod.POST)
+	public String createNewUser(Customer customer) {
 		cr.insert(customer);
-			
-		return new ModelAndView("ranking");
+		return "redirect:/displayRanking";
 	}
 }

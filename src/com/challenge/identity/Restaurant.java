@@ -16,7 +16,7 @@ import lombok.RequiredArgsConstructor;
 @NoArgsConstructor
 @RequiredArgsConstructor
 @Entity
-public class Restaurant implements Serializable {
+public class Restaurant implements Serializable, Comparable<Restaurant> {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
@@ -32,4 +32,11 @@ public class Restaurant implements Serializable {
 		this.voteCount++;
 		return voteCount;
 	}
+	
+	public int compareTo(Restaurant restaurant) {
+		return  restaurant.getVoteCount() - this.getVoteCount();
+
+	}
+
+	
 }

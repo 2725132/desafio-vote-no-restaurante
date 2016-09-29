@@ -1,4 +1,5 @@
 package com.challenge.service;
+import java.util.Collections;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,7 +27,9 @@ public class RestaurantService {
 	}
 	
 	public List<Restaurant> getResultList(int size){
-		return repository.findList(size);
+		List<Restaurant> restaurants = repository.findList(size);
+		Collections.sort(restaurants);
+		return restaurants;
 	}
 	
 }

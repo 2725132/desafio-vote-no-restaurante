@@ -32,6 +32,11 @@
   	min-width: 100%;
 }
 
+
+.td{
+	display: table-cell;
+	color: white;
+}
 .gouvea{
 	max-width: 100%;
 	display:block; 
@@ -41,7 +46,7 @@
     background-position: top center;
 }
 
- .gouveahome{
+.gouveahome{
 	max-width: 100%;
 	display:block; 
 	border: none; 
@@ -80,28 +85,61 @@ a.footer{
 .inner{
 	min-height: 50px;
 }
+
+
+h3.logo{
+	font-size: 20px;
+	font-family: 'Ubuntu', sans-serif;
+	color: white;
+	opacity: 1; !important;
+	text-align: center;
+}
+
 h2.logo{
 	font-size: 30px;
 	font-family: 'Ubuntu', sans-serif;
 	color: white;
 	opacity: 1;
+	text-align: center;
 }
+
 h1.logo{
 	font-size: 60px;
 	font-family: 'Ubuntu', sans-serif;
 	color: white;
 	opacity: 1; !important;
+	text-align: center;
 }
 
 h1.title{
 	font-family: 'Baloo Bhai', cursive;
 	color: white;
 	font-size: 60px;
-}
-.row{
 	text-align: center;
-	font-family: monospace;
 }
+h3.row{
+	font-size: 20px;
+	font-family: 'Ubuntu', sans-serif;
+	color: white;
+	font-weight: bold;
+	text-align: left;
+	border: medium;
+	text-align: left;
+	vertical-align: bottom;
+}
+
+h2.row{
+	font-size: 40px;
+	font-family: 'Ubuntu', sans-serif;
+	color: white;
+	font-weight: bold;
+	text-align: left;
+	border: medium;
+	text-align: left;
+	vertical-align: bottom;
+}
+
+
 .jumbotron{
 	background-color: transparent; !important;
 	background-size: contain;
@@ -127,24 +165,62 @@ h1.title{
 	height: 400px;
 	
 }
+
+
+
 .ranking{
 	background: #FF6347;
 	border-style: groove;
 	border-color: white;
 	border-radius: 30px 30px 30px 30px;
 	height: 600px;
+	display: table;
+	margin: 0 auto;
+	
 }
 
-.ranking-firstplace{
-	max-width: 100%;
-	display:block; 
+.firstPlace{
+	max-width: 100%; 
 	border: none;
 	background: url('img/firstplace.png');
 	background-repeat: no-repeat;
     background-size: cover;
-    background-position: top center;
-    height: 128px;
-    width: 128px;
+    height: 236px;
+    width: 156px;
+    display: inline-block;
+    float: left;
+	margin: 0 auto;
+	
+	
+	
+}
+
+.secondPlace{
+	max-width: 100%; 
+	border: none;
+	background: url('img/secondplace.png');
+	background-repeat: no-repeat;
+    background-size: cover;
+    height: 64px;
+    width: 64px;
+    display: inline-block;
+    float: left;
+	margin: 0 auto;
+	
+}
+
+.thirdPlace{
+	max-width: 100%; 
+	border: none;
+	background: url('img/thirdplace.png');
+	background-repeat: no-repeat;
+    background-size: cover;
+    height: 64px;
+    width: 64px;
+    display: inline-block;
+    float: left;
+	margin: 0 auto;
+	
 }
 
 .navbar-brand{	

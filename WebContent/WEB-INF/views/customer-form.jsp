@@ -1,4 +1,4 @@
-<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>  
+	<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>  
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>  
 
 <html>
@@ -14,17 +14,17 @@
 		<div class="row">
 				<div class="col-sm-4">
 					<h1 class="logo">${restaurantOne.name}</h1>
-					<h2 class="logo">${restaurantOne.voteCount}</p>
+					<h2 class="logo">${restaurantOne.voteCount}</h2>
 				</div>
 			
 				<div class="col-sm-4">
 					<h1 class="logo">${restaurantTwo.name}</h1>
-					<h2 class="logo">${restaurantTwo.voteCount}</p>
+					<h2 class="logo">${restaurantTwo.voteCount}</h2>
 				</div>
 			
 				<div class="col-sm-4">
 					<h1 class="logo">${restaurantThree.name}</h1>
-					<h2 class="logo">${restaurantThree.voteCount}</p>
+					<h2 class="logo">${restaurantThree.voteCount}</h2>
 				</div>
 		</div>
 

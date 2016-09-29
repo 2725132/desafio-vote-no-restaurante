@@ -19,7 +19,7 @@ import com.challenge.statistics.RestaurantStatistics;
 public class RestaurantController {
 	@Autowired
 	RestaurantRepository repository;
-	
+
 	@Autowired
 	RestaurantService service;
 
@@ -31,11 +31,11 @@ public class RestaurantController {
 		resultPage.addObject("restaurantThree", service.findById(3));
 		return resultPage;
 	}
-	
+
 	@RequestMapping(value = "/create", method = RequestMethod.POST)
 	public ModelAndView createNewRestaurant(String name) {
 		Restaurant result = repository.insert(new Restaurant(name, 0));
-		String response = result.getName() + " Successfully added with id " + result.getId(); 
+		String response = result.getName() + " Successfully added with id " + result.getId();
 		return new ModelAndView("/register", "response", response);
 	}
 
@@ -47,19 +47,19 @@ public class RestaurantController {
 	@RequestMapping(value = "/computeVote")
 	public ModelAndView vote(String restaurantId) {
 		repository.computeVote(Long.parseLong(restaurantId));
-		
+
 		ModelAndView resultPage = new ModelAndView("/customer-form");
 		resultPage.addObject("restaurantOne", service.findById(1));
 		resultPage.addObject("restaurantTwo", service.findById(2));
 		resultPage.addObject("restaurantThree", service.findById(3));
-		
+
 		return resultPage;
 	}
 
-	@RequestMapping(value="/displayRanking")
-	public ModelAndView displayRanking(){
+	@RequestMapping(value = "/displayRanking")
+	public ModelAndView displayRanking() {
 		List<Restaurant> restaurants = service.getResultList(5);
-		
-		return new ModelAndView("ranking","restaurants", restaurants);
+
+		return new ModelAndView("ranking", "restaurants", restaurants);
 	}
 }

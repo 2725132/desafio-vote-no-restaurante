@@ -10,10 +10,17 @@
 <body class="mainscreen">
 	<form class="ranking">
 		<h1 class="title">Ranking of restaurants</h1> <br>
-				<div class="firstPlace"></div><h2 class="row">${restaurants[0].name}       ${restaurants[0].voteCount}</h2> <br><br> 
-				<div class="secondPlace"></div><h3 class="row">${restaurants[1].name}       ${restaurants[1].voteCount}</h3> <br><br> 
-				<div class="thirdPlace"></div><h3 class="row">${restaurants[2].name}       ${restaurants[2].voteCount}</h3> <br><br> 
+				<div class="firstPlace"></div><br><br>
+				<h2 class="row">${restaurants[0].name}       ${restaurants[0].voteCount}</h2> <br><br> 
+				
+				<div class="secondPlace"></div><br><br>
+				<h3 class="row">${restaurants[1].name}       ${restaurants[1].voteCount}</h3> <br><br> 
+				
+				<div class="thirdPlace"></div><br><br>
+				<h3 class="row">${restaurants[2].name}       ${restaurants[2].voteCount}</h3> <br><br> 
+				
 				<h3 class="row">${restaurants[3].name}       ${restaurants[3].voteCount}</h3> <br><br> 
+				
 				<h3 class="row">${restaurants[4].name}       ${restaurants[4].voteCount}</h3> <br><br> 
 	</form>
 	<jsp:include page="footer.jsp"></jsp:include>

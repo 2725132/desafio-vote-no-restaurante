@@ -49,6 +49,7 @@
 	
 	<!-- https://mvnrepository.com/artifact/org.springframework/spring-expression -->
 	<dependency>
+import org.apache.http.HttpRequest;
     	<groupId>org.springframework</groupId>
     	<artifactId>spring-expression</artifactId>
     	<version>4.3.3.RELEASE</version>
@@ -134,17 +135,4 @@
   	
   </dependencies>
   
-<build>
-  <plugins>
-    <plugin>
-      <groupId>org.apache.maven.plugins</groupId>
-      <artifactId>maven-compiler-plugin</artifactId>
-      <configuration>
-        <compilerVersion>1.8</compilerVersion>
-        <source>1.8</source>
-        <target>1.8</target>
-      </configuration>
-    </plugin>
-  </plugins>
-</build>
 </project>

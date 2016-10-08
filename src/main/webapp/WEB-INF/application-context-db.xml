@@ -13,7 +13,7 @@
 		<property name="driverClassName" 
 					value="com.mysql.jdbc.Driver"/>
 		<property name="url" 
-					value="jdbc:mysql://localhost:3306/challenge"/>
+					value="jdbc:mysql://192.168.0.103:3306/challenge"/>
 		<property name="username" 
 					value="admin"/>
 		<property name="password" 

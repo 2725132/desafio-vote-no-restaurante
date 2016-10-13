@@ -1,0 +1,11 @@
+/home/lammer/workspace/desafio-vote-no-restaurante/src/main/java/com/challenge/repository/RestaurantRepository.java
+/home/lammer/workspace/desafio-vote-no-restaurante/src/main/java/com/challenge/controller/RestaurantController.java
+/home/lammer/workspace/desafio-vote-no-restaurante/src/main/java/com/challenge/statistics/RestaurantStatistics.java
+/home/lammer/workspace/desafio-vote-no-restaurante/src/main/java/com/challenge/identity/features/Login.java
+/home/lammer/workspace/desafio-vote-no-restaurante/src/main/java/com/challenge/controller/MainController.java
+/home/lammer/workspace/desafio-vote-no-restaurante/src/main/java/com/challenge/controller/CustomerController.java
+/home/lammer/workspace/desafio-vote-no-restaurante/src/main/java/com/challenge/repository/CustomerRepository.java
+/home/lammer/workspace/desafio-vote-no-restaurante/src/main/java/com/challenge/repository/GenericRepository.java
+/home/lammer/workspace/desafio-vote-no-restaurante/src/main/java/com/challenge/identity/Restaurant.java
+/home/lammer/workspace/desafio-vote-no-restaurante/src/main/java/com/challenge/service/RestaurantService.java
+/home/lammer/workspace/desafio-vote-no-restaurante/src/main/java/com/challenge/identity/Customer.java

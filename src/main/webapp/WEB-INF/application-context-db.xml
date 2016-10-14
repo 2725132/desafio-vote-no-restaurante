@@ -10,9 +10,9 @@
 	
 	<bean id="persistenceUnitManager"
 		class="org.springframework.orm.jpa.persistenceunit.DefaultPersistenceUnitManager">
-		<property name="defaultPersistenceUnitName" value="rentalX" />
+		<property name="defaultPersistenceUnitName" value="defaultPU" />
 		<property name="defaultDataSource" ref="dataSource" />
-		<property name="packagesToScan" value="com.rentalx" />
+		<property name="packagesToScan" value="com.challenge" />
 		<property name="validationMode" value="CALLBACK" />
 	</bean>
 	

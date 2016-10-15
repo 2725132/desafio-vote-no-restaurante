@@ -3,12 +3,9 @@ package com.challenge.statistics;
 import java.util.ArrayList;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 import com.challenge.service.RestaurantService;
 import com.challenge.identity.Restaurant;
-import com.challenge.repository.RestaurantRepository;
-import lombok.Getter;
 
 @Service
 public class RestaurantStatistics {	

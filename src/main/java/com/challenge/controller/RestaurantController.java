@@ -4,36 +4,37 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.challenge.identity.Restaurant;
-import com.challenge.repository.RestaurantRepository;
+import com.challenge.repository.cache.RestaurantCache;
 import com.challenge.service.RestaurantService;
-import com.challenge.statistics.RestaurantStatistics;
 
 @Controller
 public class RestaurantController {
-	@Autowired
-	RestaurantRepository repository;
 
 	@Autowired
 	RestaurantService service;
 
+	@Autowired
+	RestaurantCache cache;
+	
 	@RequestMapping("/home")
 	public ModelAndView vote() {
 		ModelAndView resultPage = new ModelAndView("/vote-restaurant");
-		resultPage.addObject("restaurantOne", service.findById(1));
-		resultPage.addObject("restaurantTwo", service.findById(2));
-		resultPage.addObject("restaurantThree", service.findById(3));
+		
+		resultPage.addObject("restaurantOne", cache.findById(Long.parseLong("1")));
+		resultPage.addObject("restaurantTwo", cache.findById(Long.parseLong("2")));
+		resultPage.addObject("restaurantThree", cache.findById(Long.parseLong("3")));
 		return resultPage;
 	}
 
 	@RequestMapping(value = "/create", method = RequestMethod.POST)
 	public ModelAndView createNewRestaurant(String name) {
-		Restaurant result = repository.insert(new Restaurant(name, 0));
+		Restaurant result = service.insert(new Restaurant(name, 0));
+		
 		String response = result.getName() + " Successfully added with id " + result.getId();
 		return new ModelAndView("/register", "response", response);
 	}
@@ -45,12 +46,12 @@ public class RestaurantController {
 
 	@RequestMapping(value = "/computeVote")
 	public ModelAndView vote(String restaurantId) {
-		repository.computeVote(Long.parseLong(restaurantId));
+		service.computeVote(Long.parseLong(restaurantId));
 
 		ModelAndView resultPage = new ModelAndView("/customer-form");
-		resultPage.addObject("restaurantOne", service.findById(1));
-		resultPage.addObject("restaurantTwo", service.findById(2));
-		resultPage.addObject("restaurantThree", service.findById(3));
+		resultPage.addObject("restaurantOne", service.findById(Long.parseLong("1")));
+		resultPage.addObject("restaurantTwo", service.findById(Long.parseLong("2")));
+		resultPage.addObject("restaurantThree", service.findById(Long.parseLong("3")));
 
 		return resultPage;
 	}

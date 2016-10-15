@@ -1,7 +1,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.challenge</groupId>
-  <artifactId>restaurant-challenge</artifactId>
+  <artifactId>desafio-vote-no-restaurante</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>war</packaging>
   <build>
@@ -43,6 +43,48 @@
   </build>
   <dependencies>
 
+	<!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-validator -->
+	<dependency>
+    	<groupId>org.hibernate</groupId>
+    	<artifactId>hibernate-validator</artifactId>
+    	<version>5.2.4.Final</version>
+	</dependency>
+	
+	
+	<!-- https://mvnrepository.com/artifact/javax.transaction/jta -->
+	<dependency>
+   	 	 <groupId>javax.transaction</groupId>
+  	  	 <artifactId>jta</artifactId>
+   		 <version>1.1</version>
+	</dependency>
+	
+	
+	<!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-entitymanager -->
+	<dependency>
+    	<groupId>org.hibernate</groupId>
+   		<artifactId>hibernate-entitymanager</artifactId>
+   		<version>5.1.0.Final</version>
+	</dependency>
+	
+
+
+	<!-- https://mvnrepository.com/artifact/org.springframework/spring-orm -->
+	<dependency>
+    	<groupId>org.springframework</groupId>
+    	<artifactId>spring-orm</artifactId>
+    	<version>4.3.3.RELEASE</version>
+	</dependency>
+	
+
+
+	<!-- https://mvnrepository.com/artifact/org.eclipse.persistence/javax.persistence -->
+	<dependency>
+    	<groupId>org.eclipse.persistence</groupId>
+   	 	<artifactId>javax.persistence</artifactId>
+   	 	<version>2.0.0</version>
+	</dependency>
+
+	
 	<!-- https://mvnrepository.com/artifact/javax.servlet/servlet-api -->
 	<dependency>
     		<groupId>javax.servlet</groupId>
@@ -58,6 +100,12 @@
     		<version>2.1.1</version>
 	</dependency>
 	
+	<!-- https://mvnrepository.com/artifact/junit/junit -->
+	<dependency>
+    	<groupId>junit</groupId>
+   		<artifactId>junit</artifactId>
+   		<version>4.12</version>
+	</dependency>
 	
 
 

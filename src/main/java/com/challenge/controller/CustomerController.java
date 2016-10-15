@@ -14,7 +14,6 @@ public class CustomerController {
 	@Autowired
 	CustomerRepository cr;
 
-	@Autowired
 
 	@RequestMapping(value = "/customer")
 	public ModelAndView customerPage() {

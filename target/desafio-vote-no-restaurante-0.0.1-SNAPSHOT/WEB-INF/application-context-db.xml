@@ -13,7 +13,7 @@
 		<property name="driverClassName" 
 					value="org.postgresql.Driver"/>
 		<property name="url" 
-					value="jdbc:postgres://nqbgbvfroraocf:IJSoEHlAVVZuWl12Xs-_dI5C3j@ec2-54-163-248-14.compute-1.amazonaws.com:5432/d9pmv54ntn0r8k?sslmode=require"/>
+					value="jdbc:postgresql://ec2-54-163-248-14.compute-1.amazonaws.com:5432/d9pmv54ntn0r8k?sslmode=require"/>
 		<property name="username" 
 					value="nqbgbvfroraocf"/>
 		<property name="password" 

@@ -22,6 +22,11 @@ public class Customer implements Serializable {
 	
 
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -9181705405913084427L;
+
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private long id;

@@ -18,7 +18,7 @@ public abstract class GenericRepository<Entity extends Serializable, Id extends 
 	private Class<Entity> clazz;
 	
 	@PersistenceContext
-	private EntityManager em;
+	protected EntityManager em;
 	
 	public GenericRepository(Class<Entity> clazz){
 		this.clazz = clazz; 
@@ -49,4 +49,5 @@ public abstract class GenericRepository<Entity extends Serializable, Id extends 
 	public List<Entity> findList(int size){
 		return em.createQuery("select c from " + clazz.getName() + " c ", clazz).setMaxResults(size).getResultList();
 	}
+	
 }

@@ -19,6 +19,11 @@ import lombok.Data;
 @Entity
 public class Restaurant implements Serializable, Comparable<Restaurant> {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -2978005646652592496L;
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long id;

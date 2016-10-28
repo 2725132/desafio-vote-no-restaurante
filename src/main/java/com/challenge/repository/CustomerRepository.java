@@ -9,4 +9,10 @@ public class CustomerRepository extends GenericRepository<Customer, Long>{
 	public CustomerRepository(){
 		super(Customer.class);
 	}
+	
+	public Customer findByNickName(String nick){
+		Customer result =(Customer) em.createQuery("select c from customer c where firstName=\"" + nick + "\"", Customer.class).setMaxResults(1);
+		return result;
+	}
+	
 }

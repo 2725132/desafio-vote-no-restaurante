@@ -10,7 +10,7 @@
 <body>
 	<div class="container-fluid">
 		<div class="jumbotron">
-			<h3>${response}</h1>
+			<h3>${response}</h3>
 		</div>
 		
 	</div>

@@ -29,9 +29,9 @@
                 <nav class="navbar-right" >
                     <ul class="nav navbar">
                         <li>
-                            <form:form method="post" action="home">
+                            <form method="post" action="home">
 								<button class="btn gouveahome"></button>
-							</form:form>
+							</form>
                         </li>
                     </ul>
                 </nav>
@@ -48,8 +48,8 @@
             	<br></br> 
              	<div class="">Set your new restaurant's name here</div>
 			     <div class="col-sm-6 col-sm-offset-3">
-				    <input class="form-control " ng-model="restaurant" type="text" class="input-name" placeholder="type here.." name="name" required="" type="text"/>
-                     <button class="form-btn" ng-click="alert()" method="POST" type="submit" action="create">Save</button>
+				    <input class="form-control " type="text" class="input-name" placeholder="type here.." name="name" required="" type="text"/>
+                     <button class="form-btn" method="POST" type="submit" action="create">Save</button>
                  </div>
                    
 		      </form:form>

@@ -9,7 +9,6 @@
 </head>
 <body>
 	<br><a href="home">Vote here!</a>
-	</br>
 	<br></br>
 	<a href="restaurant">Restaurant manager</a>
 </body>
